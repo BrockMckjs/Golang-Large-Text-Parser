@@ -4,3 +4,6 @@
 #Generated text files
 src/finFiles
 src/messages.txt
+
+#Generated binaries
+src/src
