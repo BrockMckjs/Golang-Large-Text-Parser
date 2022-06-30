@@ -11,7 +11,7 @@ func scanFile() {
 	//Open file
 	var fileOpen string
 	fmt.Scanln(&fileOpen)
-	file, ferr := os.Open("messages.txt")
+	file, ferr := os.Open(fileOpen)
 	if ferr != nil {
 		panic(ferr)
 	}
