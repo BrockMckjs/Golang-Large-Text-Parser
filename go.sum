@@ -1,0 +1,4 @@
+github.com/neurosnap/sentences v1.0.12 h1:iVlxfmg8+fNfa0cqFmCq0AhKw60Ikv7u5G5d/ZvQOYg=
+github.com/neurosnap/sentences v1.0.12/go.mod h1:/pwU4E9XNL21ygMIkOIllv/SMy2ujHwpf8GQPu1YPbQ=
+gopkg.in/neurosnap/sentences.v1 v1.0.7 h1:gpTUYnqthem4+o8kyTLiYIB05W+IvdQFYR29erfe8uU=
+gopkg.in/neurosnap/sentences.v1 v1.0.7/go.mod h1:YlK+SN+fLQZj+kY3r8DkGDhDr91+S3JmTb5LSxFRQo0=

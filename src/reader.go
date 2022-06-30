@@ -1,30 +1,31 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
-	"strings"
+
+	"gopkg.in/neurosnap/sentences.v1/english"
 )
 
 func scanFile() {
 	//Open file
+	fmt.Println("Enter file directory:")
 	var fileOpen string
 	fmt.Scanln(&fileOpen)
-	file, ferr := os.Open(fileOpen)
-	if ferr != nil {
-		panic(ferr)
-	}
-	scanner := bufio.NewScanner(file)
-
-	for scanner.Scan() {
-		line := scanner.Text()
-		new := strings.Split(line, ".")
-
-		for _, sentence := range new {
-			fmt.Println(sentence)
-			fmt.Println("______________")
-		}
+	file, err := os.ReadFile(fileOpen)
+	if err != nil {
+		panic(err)
 	}
 
+	text := string(file)
+
+	tokenizer, err := english.NewSentenceTokenizer(nil)
+	if err != nil {
+		panic(err)
+	}
+	sentences := tokenizer.Tokenize(text)
+	for _, s := range sentences {
+		fmt.Println(s.Text)
+		fmt.Println("__________")
+	}
 }
