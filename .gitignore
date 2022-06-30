@@ -1,0 +1,6 @@
+#.idea files
+.idea
+
+#Generated text files
+src/finFiles
+src/messages.txt
